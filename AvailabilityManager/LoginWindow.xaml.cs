@@ -18,7 +18,7 @@ namespace AvailabilityManager
     /// <summary>
     /// Interaktionslogik für LoginWindow.xaml
     /// </summary>
-    public partial class LoginWindow : Page
+    public partial class LoginWindow : Window
     {
         public LoginWindow()
         {
