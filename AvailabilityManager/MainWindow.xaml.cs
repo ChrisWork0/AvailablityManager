@@ -19,6 +19,18 @@ namespace AvailabilityManager
         public MainWindow()
         {
             InitializeComponent();
+            ShowLogin(false);
+        }
+    
+        // If LoggedIn in Database is false, do this
+        public void ShowLogin(bool login)
+        {
+            if (!login)
+            {
+                LoginWindow loginWindow = new LoginWindow();
+                this.Close();
+                loginWindow.Show();
+            }
         }
     }
 }
