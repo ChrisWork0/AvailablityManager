@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace AvailabilityManager.ViewModels
 {
-    internal class ViewModelBase
+    public class ViewModelBase : ObservableValidator
     {
+
     }
 }

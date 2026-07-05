@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using AvailabilityManager.ViewModels;
+using System.Windows;
 
 namespace AvailabilityManager
 {
@@ -7,22 +8,12 @@ namespace AvailabilityManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainViewModel mvm)
         {
             InitializeComponent();
         }
     
-        // If LoggedIn in Database is false, do this
-        public void ShowLogin(bool login)
-        {
-            var loginPage = new LoginPage();
-            var mainPage = new MainPage();
-            if (!login)
-                frame1.Content = loginPage;
-
-            else
-                frame1.Content = mainPage;
-        }
+        
 
         
     }
