@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace AvailabilityManager
 {
     /// <summary>
-    /// Interaktionslogik für LoginWindow.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class MainPage : Page
     {
-        public LoginWindow()
+        public MainPage()
         {
             InitializeComponent();
         }
