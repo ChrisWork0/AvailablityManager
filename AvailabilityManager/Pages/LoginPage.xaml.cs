@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace AvailabilityManager
@@ -15,7 +17,7 @@ namespace AvailabilityManager
 
         void OnClick1(object sender, RoutedEventArgs e)
         {
-            var mw = new MainWindow();
+            var mw = App.ServiceProvider.GetRequiredService<MainWindow>();
             var mainPage = new MainPage();
             mw.frame1.Content = mainPage;
         }
