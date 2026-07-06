@@ -8,8 +8,13 @@
       d:DesignHeight="600" d:DesignWidth="1200"
       Title="MainPage">
 
-    <Grid>
+    <Page.Resources>
+        <Style x:Key="CenteredHeader" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
 
+    <Grid>
         <Grid.Resources>
             <Style TargetType="{x:Type Label}">
                 <Setter Property="FontWeight" Value="Bold"/>
@@ -95,8 +100,18 @@
 
 
 
-        <DataGrid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5">
-
+        <DataGrid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False"
+                  ColumnHeaderStyle="{StaticResource CenteredHeader}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="KW" Width="0.3*"/>
+                <DataGridTextColumn Header="Montag" Width="*"/>
+                <DataGridTextColumn Header="Dienstag" Width="*"/>
+                <DataGridTextColumn Header="Mittwoch" Width="*"/>
+                <DataGridTextColumn Header="Donnerstag" Width="*"/>
+                <DataGridTextColumn Header="Freitag" Width="*"/>
+                <DataGridTextColumn Header="Samstag" Width="*"/>
+                <DataGridTextColumn Header="Sonntag" Width="*"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Page>
