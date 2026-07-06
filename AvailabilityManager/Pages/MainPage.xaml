@@ -103,7 +103,8 @@
         <DataGrid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False"
                   ColumnHeaderStyle="{StaticResource CenteredHeader}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="KW" Width="0.3*"/>
+                <DataGridTextColumn Header="KW" Width="0.25*"/>
+                <DataGridTextColumn Header="Jahr" Width="0.4*"/>
                 <DataGridTextColumn Header="Montag" Width="*"/>
                 <DataGridTextColumn Header="Dienstag" Width="*"/>
                 <DataGridTextColumn Header="Mittwoch" Width="*"/>

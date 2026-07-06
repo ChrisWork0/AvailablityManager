@@ -32,29 +32,32 @@
         <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" 
                  Height="30" Width="500" 
                  VerticalAlignment="Bottom" VerticalContentAlignment="Center"
+                 Padding="5,0,0,0"
                  Margin="55,0,0,10"/>
 
         <!-- Password Input -->
         <Label Grid.Row="2" Grid.Column="0"  
                VerticalAlignment="Top" HorizontalAlignment="Center" 
                Margin="10" Content="Password 🔒"/>
-        <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
+        <PasswordBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
                  Height="30" Width="500" 
                  VerticalAlignment="Top" VerticalContentAlignment="Center"
+                 Padding="5,0,0,0"
                  Margin="55,10,0,0"/>
 
-        
+
 
         <Button Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" 
-                HorizontalAlignment="Center" VerticalContentAlignment="Center"
-                Background="Green"
-                Foreground="White"                             
+                HorizontalAlignment="Center" VerticalContentAlignment="Center"              
+                Background="DeepSkyBlue"
+                Foreground="Black"                             
                 Content="Login"
                 FontSize="20"
+                FontWeight="Bold"
                 Width="175"
                 Height="40"
                 Click="OnClick1"
-                BorderBrush="DarkGreen"
+                BorderBrush="CornflowerBlue"
                 BorderThickness="4">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
