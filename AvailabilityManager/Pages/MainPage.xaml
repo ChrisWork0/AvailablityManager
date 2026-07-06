@@ -9,8 +9,68 @@
       Title="MainPage">
 
     <Grid>
-        <Button VerticalAlignment="Center" HorizontalAlignment="Center"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"
+               Content="Verfügbarkeiten" FontSize="25" FontWeight="Bold"/>
+
+        <StackPanel Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label Content="Montag:"/>
+            <Label Content="Dienstag: "/>
+            <Label Content="Mittwoch: "/>
+            <Label Content="Donnerstag: "/>
+            <Label Content="Freitag: "/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                    Width="150" Margin="10,8,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,0,0,8"/>
+                    <Setter Property="Height" Value="18"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBox/>
+            <TextBox/>
+            <TextBox/>
+            <TextBox/>
+            <TextBox/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label Content="Samstag: "/>
+            <Label Content="Sonntag: "/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="5" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Width="150" Margin="10,9,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,0,0,8"/>
+                    <Setter Property="Height" Value="18"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBox/>
+            <TextBox/>
+        </StackPanel>
+
+        <!--Button Grid.ColumnSpan="4" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center"
                 Content="Welcome" Background="DarkRed" Foreground="White"
-                FontSize="100"/>
+                FontSize="100"-->
     </Grid>
 </Page>
