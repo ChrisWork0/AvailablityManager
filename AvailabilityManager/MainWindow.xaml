@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AvailabilityManager"
         mc:Ignorable="d"
-        Title="SG Titans AvailabilityManager" Height="450" Width="800">
+        Title="SG Titans AvailabilityManager" Height="600" Width="1200">
     <Grid>
         <Frame x:Name="frame1"></Frame>
     </Grid>
