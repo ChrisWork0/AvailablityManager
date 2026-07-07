@@ -39,14 +39,11 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Column="1" Grid.ColumnSpan="7" FontSize="18">KW 23 (10.05.2026 - 16.05.2026)</Label>
+		<Label Grid.Column="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" FontSize="18">Willkommen Trafy!</Label>
 
         <Label Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"
                Content="Verfügbarkeiten" FontSize="25"/>
 
-
-        <StackPanel>
-            
-        </StackPanel>
         <StackPanel Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Label Content="10.05. Montag:"/>
             <Label Content="11.05. Dienstag: "/>
