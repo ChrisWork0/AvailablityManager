@@ -38,18 +38,18 @@
             <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="1" Grid.ColumnSpan="7" FontSize="18">KW 23 (10.05.2026 - 16.05.2026)</Label>
-		<Label Grid.Column="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" FontSize="18">Willkommen Trafy!</Label>
+        <Label Grid.Column="1" Grid.ColumnSpan="7" FontSize="18" Content="{Binding CurrentWeek}"/>
+		<Label Grid.Column="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" FontSize="18" Content="{Binding WelcomeMessage}"/>
 
         <Label Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"
-               Content="Verfügbarkeiten" FontSize="25"/>
+               Content="{Binding Mask}" FontSize="25"/>
 
         <StackPanel Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Label Content="10.05. Montag:"/>
-            <Label Content="11.05. Dienstag: "/>
-            <Label Content="12.05. Mittwoch: "/>
-            <Label Content="13.05. Donnerstag: "/>
-            <Label Content="14.05. Freitag: "/>
+            <Label Content="{Binding Monday}"/>
+            <Label Content="{Binding Tuesday}"/>
+            <Label Content="{Binding Wednesday}"/>
+            <Label Content="{Binding Thursday}"/>
+            <Label Content="{Binding Friday}"/>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" 
@@ -69,8 +69,8 @@
 
         <StackPanel Grid.Column="4" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"
                     Margin="0,0,0,80">
-            <Label Content="15.05. Samstag: "/>
-            <Label Content="16.05. Sonntag: "/>
+            <Label Content="{Binding Saturday}"/>
+            <Label Content="{Binding Sunday}"/>
         </StackPanel>
 
         <StackPanel Grid.Column="5" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"

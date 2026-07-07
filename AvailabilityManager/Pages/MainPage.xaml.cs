@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AvailabilityManager.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace AvailabilityManager
 {
@@ -20,9 +22,13 @@ namespace AvailabilityManager
     /// </summary>
     public partial class MainPage : Page
     {
-        public MainPage()
+        private ILogger _logger;
+        
+        public MainPage(ILogger logger, MainViewModel mainViewModel)
         {
             InitializeComponent();
+            _logger = logger;
+            DataContext = mainViewModel;
         }
     }
 }

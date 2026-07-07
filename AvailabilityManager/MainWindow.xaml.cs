@@ -8,10 +8,10 @@ namespace AvailabilityManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(MainViewModel mvm, bool login = false)
+        public MainWindow(MainViewModel mvm, LoginViewModel lvm, bool login = false)
         {
             InitializeComponent();
-            mvm.ShowLogin(login, this);
+            lvm.ShowLogin(login, this, mvm);
         }
     
         

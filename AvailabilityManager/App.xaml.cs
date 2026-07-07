@@ -1,9 +1,11 @@
-﻿using AvailabilityManager.ViewModels;
+﻿using System.Diagnostics.Eventing.Reader;
+using AvailabilityManager.ViewModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using System.Windows;
+using AvailabilityManager.Services;
 
 namespace AvailabilityManager
 {
@@ -20,6 +22,8 @@ namespace AvailabilityManager
         {
             var builder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
             var config = builder.Build();
+            var connectionString = config.GetConnectionString("Default") 
+                                   ?? throw new ArgumentException("ConnectionString not found.");
             var services = new ServiceCollection();
 
             services.AddSingleton<IConfiguration>(config);
@@ -33,8 +37,11 @@ namespace AvailabilityManager
                     o.TimestampFormat = "[HH:mm:ss] ";
                 }));
                 ILogger logger = factory.CreateLogger(typeof(MainWindow));
+                var loginService = new LoginService(connectionString, logger);
 
-                return new MainWindow(new MainViewModel(logger));
+                string name = loginService.CheckLogin();
+                return new MainWindow(new MainViewModel(logger, name), new LoginViewModel(logger), 
+                    !string.IsNullOrEmpty(name));
             });
 
             ServiceProvider = services.BuildServiceProvider();
